@@ -7,16 +7,15 @@
       <!-- Form -->
       <b-form @submit="onSubmit" @reset="onReset" v-if="show">
         <b-form-group
-          id="input-group-email"
-          label="Email Address:"
-          label-for="input-email"
+          id="input-group-username"
+          label="Enter Username:"
+          label-for="input-username"
         >
           <b-form-input
-            id="input-email"
-            v-model="form.email"
-            type="email"
-            placeholder="Enter email"
-            required
+            id="input-username"
+            v-model="form.username"
+            type="text"
+            placeholder="Enter username"
           ></b-form-input>
         </b-form-group>
 
@@ -30,7 +29,6 @@
             v-model="form.password"
             type="password"
             placeholder="Enter password"
-            required
           ></b-form-input>
         </b-form-group>
 
@@ -39,15 +37,16 @@
     </div>
   </div>
 </template>
+
 <style>
 .login-container {
-  height: 100vh; /* Buat tinggi halaman penuh */
-  background-color: #f0f0f0; /* Warna latar belakang halaman */
+  height: 100vh;
+  background-color: #f0f0f0;
 }
 
 .login-box {
   width: 100%;
-  max-width: 400px; /* Ukuran maksimal form */
+  max-width: 400px;
   padding: 2rem;
   background-color: white;
   border-radius: 8px;
@@ -55,7 +54,7 @@
 }
 
 .game-logo {
-  width: 150px; /* Ukuran logo game */
+  width: 150px;
 }
 
 @media (max-width: 576px) {
@@ -70,7 +69,7 @@ export default {
   data() {
     return {
       form: {
-        email: "",
+        username: "",
         password: "",
       },
       show: true,
@@ -79,11 +78,21 @@ export default {
   methods: {
     onSubmit(event) {
       event.preventDefault();
-      alert(`Email: ${this.form.email}\nPassword: ${this.form.password}`);
+
+      const a = this.form.username;
+      const b = this.form.password;
+
+      if (this.form.username === "admin" && this.form.password === "12345") {
+        alert("Login successful!");
+        
+        this.$router.push("/");
+      } else {
+        alert("Username " + a + " dan Password " + b + " Tidak Ditemukan");
+      }
     },
     onReset(event) {
       event.preventDefault();
-      this.form.email = "";
+      this.form.username = "";
       this.form.password = "";
     },
   },

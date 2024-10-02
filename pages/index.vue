@@ -21,8 +21,8 @@
       </b-carousel>
     </div>
 
-    <br>
-    <hr>
+    <br />
+    <hr />
     <!-- BAGIAN TOP UP -->
     <h3 class="text-center mt-4 mb-5">Top Up Game</h3>
     <div class="row">
