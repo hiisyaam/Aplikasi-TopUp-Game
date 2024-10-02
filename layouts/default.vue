@@ -55,7 +55,7 @@ export default {
 /* Navbar default styles */
 .navbar {
   padding: 1rem 1rem;
-  background: rgba(250, 239, 239, 0.8); /* Warna dasar sebelum scroll */
+  background: #fefefecc; /* Warna dasar sebelum scroll */
   transition: background 0.3s ease, backdrop-filter 0.3s ease;
 }
 

@@ -1,3 +1,3 @@
 <template>
-    <h2>TOP UP MOBEL LEJEN</h2>
+    <h2>TOP UP MOBILE LEGEND</h2>
 </template>
